@@ -4,7 +4,7 @@ from torch import nn
 from PIL import Image
 import matplotlib.pyplot as plt
 
-from test import Net
+from nn import Net
 
 
 ############################# CHANGE THIS ###############################
@@ -43,7 +43,7 @@ def classify_and_show(model, image, label):
 transform = transforms.ToTensor()
 
 # Download the MNIST dataset
-dataset = datasets.MNIST('../data', train=True, download=True, transform=transform)
+dataset = datasets.MNIST('data', train=True, download=True, transform=transform)
 
 # Load the pre-trained model
 model = load_model(model_path)
